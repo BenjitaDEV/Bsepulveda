@@ -2,3 +2,10 @@ print("ingresa 3 numeros")
 n1=int(input())
 n2=int(input())
 n3=int(input())
+
+if n1>n2 and n1>n3:
+    print("el mayor es el numero",n1)
+elif n2>n3:
+    print("el mayor es", n2)
+else:
+    print("el mayor es", n3)
