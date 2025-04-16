@@ -1,0 +1,4 @@
+print("ingresa 3 numeros")
+n1=int(input())
+n2=int(input())
+n3=int(input())
