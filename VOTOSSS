@@ -1,0 +1,6 @@
+cant=int(input("ingrese la cantidad de votantes "))
+
+kaiser=0
+nose=0
+
+for i in range(cant):
