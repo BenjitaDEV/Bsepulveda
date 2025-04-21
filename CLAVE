@@ -1,0 +1,9 @@
+
+clave_correcta=int("1234")
+
+pas=int(input("Ingresa la contraseña: "))
+
+if pas==clave_correcta:
+    print("+100000000000000 social credit.")
+else:
+    print("ñaoñao amigao.")

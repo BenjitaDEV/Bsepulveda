@@ -1,0 +1,53 @@
+#inicio de estudio con ciclo for
+#numero repeticion
+
+# num=int(input("ingresa un num "))
+
+
+# for i in range(num):
+#     print(i+1)
+
+# #TABLAS
+# num=int(input("ingresa un num "))
+
+
+# for i in range(1,10):
+#    # print(num*5 (i+1))
+#     print(num, "x", i+1, "=", (i+1)*num)      
+
+# #MASTABLAS
+# for j in range(10):
+#     for i in range(10):
+#         print ( j+1 , "x", i+1, "=", (i+1)*(j+1) )
+
+# #promedio notas
+# cant=int(input("ingresa el numero de notas "))
+# suma=0
+# for i in range(cant):
+#     print("ingrese nota", i+1)
+#     nota=float(input())
+#     suma+=nota
+#     #suma=suma+nota
+# prom=suma/cant
+# print("el promedio es", prom)
+
+#promedio notas
+cantA=int(input("ingresa el numero de alumnos "))
+
+for j in range(cantA):
+    print("ingresa el numero de notas del alumno", j+1)
+    cantN=int(input())
+    suma=0
+    for i in range(cantN):
+        print("ingrese nota", i+1, "del alumno ", j+1, "(use valores en decimal)")
+        nota=float(input())
+        suma+=nota
+        #suma=suma+nota
+    prom=suma/cantN
+    print("el promedio es", prom)
+    if prom>=4:
+        print("usted paso")
+    else
+        print("reprobo")
+    
+
