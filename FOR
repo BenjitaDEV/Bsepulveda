@@ -31,23 +31,40 @@
 # prom=suma/cant
 # print("el promedio es", prom)
 
-#promedio notas
-cantA=int(input("ingresa el numero de alumnos "))
+# #promedio notas
+# cantA=int(input("ingresa el numero de alumnos "))
 
-for j in range(cantA):
-    print("ingresa el numero de notas del alumno", j+1)
-    cantN=int(input())
-    suma=0
-    for i in range(cantN):
-        print("ingrese nota", i+1, "del alumno ", j+1, "(use valores en decimal)")
-        nota=float(input())
-        suma+=nota
-        #suma=suma+nota
-    prom=suma/cantN
-    print("el promedio es", prom)
-    if prom>=4:
-        print("usted paso")
-    else
-        print("reprobo")
+# for j in range(cantA):
+#     print("ingresa el numero de notas del alumno", j+1)
+#     cantN=int(input())
+#     suma=0
+#     for i in range(cantN):
+#         print("ingrese nota", i+1, "del alumno ", j+1, "(use valores decimales)")
+#         nota=float(input())
+#         suma+=nota
+#         #suma=suma+nota
+#     prom=suma/cantN
+#     print("el promedio es", prom)
+#     if prom>=4:
+#         print("usted paso")
+#     else:
+#         print("reprobo")
+
+# #sumaaa
     
+# num=int(input("ingrese un numero "))
+# suma=0
+# for i in range(num):
+#     suma+=i+1
+# print("la suma de los numeros es ", suma)
 
+
+cant=int(input("ingrese la cantidad de numeros "))
+
+for i in range(cant):
+    num=int(input("ingrese un numero "))
+
+    if num % 2==0:
+        print("el numero",num, " es par")
+    else:
+        print("el numero", num, "es impar")
