@@ -1,0 +1,21 @@
+# clave=3443
+# intentos=0
+# password=int(input("ingrese su pass :"))
+# while clave!=password:
+#     print("error")
+#     password=int(input("ingrese su pass :"))
+
+# print("Bienvenido")
+
+clave=3443
+intentos=0
+password=int(input("ingrese su pass :"))
+while clave!=password and intentos<=3:
+    print("error")
+    intentos=intentos+1
+    password=int(input("ingrese su pass :"))
+
+if intentos>=3:
+    print("ya no tiene mas intentos")
+else:
+    print("Bienvenido")

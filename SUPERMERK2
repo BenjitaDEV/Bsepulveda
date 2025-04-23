@@ -1,0 +1,26 @@
+#SUPERMERK2
+
+cant=int(input("cuantos productos llevara :"))
+total=0
+for i in range(cant):
+    print('''
+        Que producto llevará?
+        1.-Diazepam $9000
+        2.- Metametazona $18500
+        3.- oblea China $1000
+        ''')
+    op=int(input())
+    if op==1:
+       print("usted llevaria Diazepam")
+       total=total+9000
+    elif op==2:
+        print("usted llevaria Metametazona")
+        total=total+18500
+    elif op==3:
+        print("usted llevaria Oblea China $1000")
+        total=total+1000
+    else:
+        print("seleccione una opcion valida")
+
+print ("el total neto es ", total)
+print ("el total mas IVA es ", total*1.19)

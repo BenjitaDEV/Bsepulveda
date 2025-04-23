@@ -1,6 +1,50 @@
-cant=int(input("ingrese la cantidad de votantes "))
+# c1="Shrek"
+# c2="Kakarotto"
+# cv1=0
+# cv2=0
+# cantV=int(input("¿cuantos votantes son? :"))
 
-kaiser=0
-nose=0
+# for i in range (cantV):
+#     print(F"¿por quien votara? 1.- {c1}, 2.- {c2}")
+#     voto=int(input())
+#     if voto ==1:
+#         cv1+=1 
+#         #cv1=cv1+1
+#     else:
+#         cv2=cv2+1
+# print(F"la cantidad de votos de {c1} es {cv1}")
+# print(F"la cantidad de votos de {c2} es {cv2}")
+# if cv1>cv2:
+#     print(F"ganó{c1}")
+# elif cv1<cv2:
+#     print(F"ganó {c2}")
+# else:
+#     print("es un empate!")
 
-for i in range(cant):
+# pa="musolini"
+# for i in pa:
+#     print(i)
+
+# frase=input("ingrese una frase")
+# c=0
+# cons=0
+# v=0
+# for i in frase:
+#     #print(i)
+#     if i.lower() in "aeiou":
+#         v=v+1
+    
+#     else:
+#         cons=cons+1
+
+#     c=c+1
+# print("la cantidad de vocales es", v)
+# print("la cantidad de caracteres es", c)
+# print("la cantidad de consonantes es", cons)
+
+# num=int(input("ingrese un numero:"))
+
+# for i in range(num):
+#     if i %2==0:
+#         print(F"el numero {i} es par ")
+#         print(F"el numero {i} es impar ")
