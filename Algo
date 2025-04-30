@@ -1,0 +1,56 @@
+# intentos=3
+
+# while intentos>0:
+#     intentos=-1
+#     color=input("ingrese un color")
+
+#     if color.lower()!="negro":
+#         print("el color no es el requerido")
+#     else:
+#         print("este es el color requerido")
+#         break
+
+print("ingrese su comuna")
+
+comuna=input()
+descuento=0
+total=0
+arancel=200000
+
+print("su comuna es", comuna)
+
+if comuna=="Puente alto":
+    descuento=25
+elif comuna=="la Florida":
+    descuento=20
+elif comuna=="San Joaquin":
+    descuento=15
+elif comuna=="La Pintana":
+    descuento=30
+else:
+    print("comuna fallida")
+
+print("ingrese su grupo familiar")
+
+grupo=int(input())
+descuentoF=0
+if grupo==1:
+    descuentoF=2
+elif 2<=grupo<=4:
+    descuentoF=3
+elif grupo >= 5:
+    descuentoF=4
+else:
+    print("num de personas invalido")
+
+descuento+descuentoF==total
+
+total=calcular_descuento(comuna, grupo)
+monto_con_descuento=arancel*(1-descuento_aplicado)
+
+print(F"comuna de residencia: {comuna}")
+print(F"num de personas: {grupo}")
+print(f"descuento total aplicado: {descuento_aplicado * 100:.2f}%")
+print(F"arancel actual: {arancel:,.0f}")
+print(F"monto final a pagar: ${monto_con_descuento:,.0f}")
+
