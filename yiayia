@@ -1,0 +1,28 @@
+def calcular_puntaje_credito(ingresos, nivel_educacional, nacionalidad):
+
+    puntaje_base_ingresos = 0
+    if 500000 <= ingresos <= 1000000:
+        puntaje_base_ingresos = 300000
+    elif 1000000 < ingresos <= 1500000:
+        puntaje_base_ingresos = 650000
+
+    multiplicador_educacional = 1
+    if nivel_educacional.lower() == 'medio':
+        multiplicador_educacional = 1.3
+    elif nivel_educacional.lower() == 'superior':
+        multiplicador_educacional = 1.5
+
+    bono_nacionalidad = 0
+    if nacionalidad.lower() == 'chilena':
+        bono_nacionalidad = 300000
+
+    puntaje_credito = puntaje_base_ingresos * multiplicador_educacional + bono_nacionalidad
+    return puntaje_credito
+
+# Ejemplo de uso
+ingreso_persona = 1200000
+educacion_persona = "Superior"
+nacionalidad_persona = "Chilena"
+
+puntaje = calcular_puntaje_credito(ingreso_persona, educacion_persona, nacionalidad_persona)
+print(f"El puntaje de crédito calculado es: ${puntaje:,.0f}")

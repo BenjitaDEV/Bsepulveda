@@ -1,0 +1,161 @@
+# Calcular el puntaje de credito
+# se debe calcular que tanto credito tiene una persona
+# en cierta cantidad financiera debera considerar
+# cantidad de ingresos, nivel educacional y nacionalidad
+# cantidad de ingresos
+# 500.000 a 1.000.000 : 300.000
+# 1.000.000 a 1.500.000: 650.000
+# nivel educacional
+# basico : x1, medio: x1.3, superior: x1.5
+# Nacionalidad
+# Chilena : +300.000, extranjero: +0
+
+
+# nivel=0
+# nacionalidad=0
+
+# ingresos=int(input("ingresa tu credito\n"))
+# nacionalidad=input("ingresa tu nacionalidad\n")
+# nivel=input("ingresa tu nivel educacional\n")
+
+# if ingresos 500000>1000000:
+  
+
+
+
+
+#pedir dia y mes de nacimiento y mostrar el signo zodiacal
+
+# dia=input("ingresa tu dia de nacimiento")
+# mes=input("ingresa tu mes de nacimiento")
+
+## input("tu signo zodiacal es: ")
+
+# def obtener_signo_zodiacal(dia, mes):
+#     if (mes == 3 and 21 <= dia <= 31) or (mes == 4 and 1 <= dia <= 19):
+#         return "Aries"
+#     elif (mes == 4 and 20 <= dia <= 30) or (mes == 5 and 1 <= dia <= 20):
+#         return "Tauro"
+#     elif (mes == 5 and 21 <= dia <= 31) or (mes == 6 and 1 <= dia <= 20):
+#         return "Géminis"
+#     elif (mes == 6 and 21 <= dia <= 30) or (mes == 7 and 1 <= dia <= 22):
+#         return "Cáncer"
+#     elif (mes == 7 and 23 <= dia <= 31) or (mes == 8 and 1 <= dia <= 22):
+#         return "Leo"
+#     elif (mes == 8 and 23 <= dia <= 31) or (mes == 9 and 1 <= dia <= 22):
+#         return "Virgo"
+#     elif (mes == 9 and 23 <= dia <= 30) or (mes == 10 and 1 <= dia <= 22):
+#         return "Libra"
+#     elif (mes == 10 and 23 <= dia <= 31) or (mes == 11 and 1 <= dia <= 21):
+#         return "Escorpio"
+#     elif (mes == 11 and 22 <= dia <= 30) or (mes == 12 and 1 <= dia <= 21):
+#         return "Sagitario"
+#     elif (mes == 12 and 22 <= dia <= 31) or (mes == 1 and 1 <= dia <= 19):
+#         return "Capricornio"
+#     elif (mes == 1 and 20 <= dia <= 31) or (mes == 2 and 1 <= dia <= 18):
+#         return "Acuario"
+#     elif (mes == 2 and 19 <= dia <= 29) or (mes == 3 and 1 <= dia <= 20):
+#         return "Piscis"
+#     else:
+#         return "Fecha inválida"
+
+# dia_str = input("Ingresa el día de tu nacimiento (en número): ")
+# mes_str = input("Ingresa el mes de tu nacimiento (en número): ")
+
+
+# import random
+# from random import randint
+
+# # ejercciciooooo
+# print("ingresa 2 digits")
+# n1=int(input("numero 1: "))
+# n2=int(input("numero 2: "))
+
+# while n1>n2:
+#     print("el numero 2 no puede ser menor")
+#     n2=int(input("numero 2: "))
+
+# num=randint(n1, n2)
+
+# import time
+# import random
+
+
+# class Huevo:
+#     def __init__(self):
+#         self.temperatura = 37  # Temperatura ideal en grados
+#         self.integridad = 100  # % de integridad
+#         self.estado_animo = "feliz"
+#         self.nutrientes = 50  # Nivel de alimentación (0-100)
+#         self.tiempo_restante = 30  # Tiempo simulado para la eclosión
+#         self.vivo = True
+    
+#     def calentar(self):
+#         self.temperatura += random.randint(1, 3)
+#         print("Has calentado el huevo.")
+
+#     def enfriar(self):
+#         self.temperatura -= random.randint(1, 3)
+#         print("Has enfriado el huevo.")
+
+#     def alimentar(self):
+#         self.nutrientes += random.randint(5, 15)
+#         print("Has alimentado al huevo.")
+
+#     def evento_aleatorio(self):
+#         eventos = ["Una ráfaga de viento enfría el huevo", "El sol brilla y calienta el huevo", 
+#                    "El huevo se pone ansioso y su integridad baja", "El huevo está feliz y su temperatura se estabiliza"]
+#         evento = random.choice(eventos)
+#         print(f"Evento inesperado: {evento}")
+
+#         if evento == "Una ráfaga de viento enfría el huevo":
+#             self.temperatura -= 3
+#         elif evento == "El sol brilla y calienta el huevo":
+#             self.temperatura += 3
+#         elif evento == "El huevo se pone ansioso y su integridad baja":
+#             self.integridad -= 5
+
+#     def verificar_estado(self):
+#         if self.temperatura < 30 or self.temperatura > 40:
+#             self.integridad -= random.randint(10, 20)
+#             print("¡Temperatura inadecuada! El huevo se ha dañado.")
+        
+#         if self.nutrientes < 20:
+#             self.estado_animo = "triste"
+#             self.integridad -= 5
+#             print("El huevo está triste por falta de comida.")
+
+#         if self.integridad <= 0:
+#             self.vivo = False
+#             print("El huevo se ha roto...")
+#         elif self.tiempo_restante <= 0:
+#             self.vivo = False
+#             print("¡Felicidades! El huevo ha nacido.")
+
+#     def reducir_tiempo(self):
+#         self.tiempo_restante -= 1
+
+# def jugar():
+#     huevo = Huevo()
+
+#     print("Bienvenido al juego de cuidar el huevo. Mantén su temperatura entre 30-40 grados, aliméntalo y protégelo para que nazca.")
+
+#     while huevo.vivo:
+#         print(f"Temperatura: {huevo.temperatura}°C | Integridad: {huevo.integridad}% | Nutrientes: {huevo.nutrientes} | Estado de ánimo: {huevo.estado_animo} | Tiempo hasta eclosión: {huevo.tiempo_restante}")
+        
+#         accion = input("¿Quieres calentar (c), enfriar (e) o alimentar (a) el huevo? ")
+#         if accion.lower() == 'c':
+#             huevo.calentar()
+#         elif accion.lower() == 'e':
+#             huevo.enfriar()
+#         elif accion.lower() == 'a':
+#             huevo.alimentar()
+#         else:
+#             print("Acción no válida. Intenta de nuevo.")
+
+#         huevo.evento_aleatorio()
+#         huevo.verificar_estado()
+#         huevo.reducir_tiempo()
+#         time.sleep(2)
+
+# jugar()
