@@ -1,0 +1,197 @@
+# print("Repaso")
+# ''''
+# caracter : string # variables tipo texto EJ: "Mariano"
+# Entero : integer (int) " Variable tipo numero entero EJ: 18
+# real : float # numeros con decimales 
+# logico
+
+# = es asignacion, asigna un valor a una variable 
+# == es comparacion, comparo 2 valores ej: numero==9
+
+# '''
+##declaracion de variables
+
+# nombre="benja"
+# edad=20
+
+##concadenacion
+
+# print("hola", nombre, "su edad es", edad)
+# print(f"hola {nombre} su edad es {edad}")
+
+## solicitud de variables
+
+# nombre=input("ingrese su nombre: ")
+# edad=int(input("ingrese su edad"))
+
+# print(f"hola {nombre} su edad es {edad}")
+
+# num=int(input("ingrese un numero\n"))
+
+# for i in range ( 10 ) :
+#     print ( num, "x" , i+1, "=", (i+1)*num)
+
+##PROMEDIO
+
+# cant=int(input("ingrese numero de notas\n"))
+
+# suma=0
+
+# for i in range(cant):
+#     print("ingrese nota", i+1)
+#     nota=float(input())
+#     suma+=nota
+#     # suma=suma+nota
+# prom=suma/cant
+# print("el promedio es", round(prom,1))
+
+##LIBRERIAS
+
+import time
+import random
+from random import randint
+
+# num1=random.randint(1,6)
+# num2=randint(1,6)
+# print(num1,num2)
+
+# for i in range(3):
+#     time.sleep(1)
+#     print(i+1)
+
+##EXPLICACION USO WHILE
+
+# num=0
+
+# while num<5:
+#     time.sleep(1)
+#     print("hOlA")
+#     num+=1
+
+##CLAVE
+
+# clave=4455
+
+# password=int(input("ingrese su password\n"))
+# while clave!=password:
+#     print("ERROR, intente de nuevo")
+#     password=int(input("ingrese su password\n"))
+# print("Bienvenido al sistema")
+
+#CLAVE CON INTENTOS
+
+# clave=4455
+# intentos=3
+# password=int(input("ingrese su clave:\n"))
+
+
+# while clave!=password or intentos==0:
+#     intentos-=1
+#     print(f"ERROR, le quedan {intentos} intentos")
+#     password=int(input("ingrese su password\n"))
+#     if intentos<=1:
+#         break
+
+# if intentos!=0 and clave==password:
+#     print("Bienvenido al sistema")
+# else:
+#     print("Sistema bloqueado")
+
+#JUEGO DE PELEAS
+
+# designe 2 peleadores solicitando sus nombres
+# cada peleador tiene 50 hp, debe mostrar la 
+# barra de energia, las peleas son por turnos
+# cada turno el peleador ataca entre 3 y 15
+# existe posibilidad de ataque critico del 20% sera atk*2
+# gana el que le quita todo el HP al rival
+
+p1=input("Peleador 1")
+p2=input("Peleador 2")
+hp1=50
+hp2=50
+turno=random.randint(1,2)
+
+while hp1>0 or hp2>0:
+    if turno %2==0:
+        print("turno de ",p1)
+        atk=random.randint(3,15)
+        critical=random.randint(1,5)
+        if critical==3:
+            atk*2
+            print("ataque critico")
+        hp2-=atk
+        time.sleep(1)
+        print(f"vida de {p2}")
+        print("■"*hp2)
+    else:
+        print("turno de ",p2)
+        atk=random.randint(3,15)
+        critical=random.randint(1,5)
+        if critical==3:
+            atk*2
+            print("ataque critico")
+        hp1-=atk
+        time.sleep(1)
+        print(f"vida de {p1}")
+        print("■"*hp1)
+    turno+=1
+
+ultra=random.randint(3,10)
+
+if hp1>hp2:
+    for i in range(ultra):
+        print("kick")
+        time.sleep(1)
+    print(F"Ha ganado {p1}")
+    print("ULTRAAAAA!!!")
+else:
+    for i in range(ultra):
+        print("kick")
+        time.sleep(1)
+    print(f"Ha ganado {p2}")
+    print("ULTRAAAAA!!!")
+
+
+
+
+# num=int(input("Cuantas ventanas tiene: "))
+
+# for i in range(num):
+#     print("Cierra la ventana")
+
+
+#EJERCICIO FUTBOL
+
+# Categorizar jugadores
+# En una liga amateur, se paga a los jugadores de futbol
+# Cuando anota mas goles recibe un bono en su paga
+# Entre 1-3 goles, 4%; entre 4-6 goles 6%, 7 goles o mas 8%
+# Si su equipo queda entre los 3 primeros, +3000
+# Si su equipo queda entre 4-8, +2000
+# Si su equipo queda entre 9 y mas, +1000
+# El pago base por jugador es de 5000
+
+# goles=randint(1,10)
+# print("los goles anotados en la temporada fueron", goles)
+# time.sleep(2)
+# pos=randint(1,16)
+# print("la posicion final en la temporada fue", pos)
+# time.sleep(2)
+# # goles=int(input("cuantos goles anoto?"))
+# sueldo=5000
+
+# if goles>=1 and goles<=3:
+#     sueldo=sueldo*1.04
+# elif goles>=4 and goles<=6:
+#     sueldo=sueldo*1.06
+# else:
+#     sueldo=sueldo*1.08
+# print("el sueldo aumentado es ", sueldo)
+# if pos>=1 and pos<=3:
+#     sueldo+=3000
+# elif pos>=4 and pos<=8:
+#     sueldo+=2000
+# else:
+#     sueldo+=1000
+# print("el total del sueldo del jugador al final de temporada es:", sueldo)

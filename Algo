@@ -12,45 +12,41 @@
 
 print("ingrese su comuna")
 
-comuna=input()
 descuento=0
 total=0
 arancel=200000
 
-print("su comuna es", comuna)
+print('''
+    1.- La Florida 20%
+    2.- La Pintana 30%
+    3.- Puente alto 25%
+    4.- San Joaquin 15%
+      ''')
+comuna=int(input("seleccione una comuna: "))
 
-if comuna=="Puente alto":
-    descuento=25
-elif comuna=="la Florida":
+if comuna==1:
     descuento=20
-elif comuna=="San Joaquin":
-    descuento=15
-elif comuna=="La Pintana":
+elif comuna==2:
     descuento=30
+elif comuna==3:
+    descuento=25
+elif comuna==4:
+    descuento=15
 else:
-    print("comuna fallida")
+    print("comuna incorrecta")
 
-print("ingrese su grupo familiar")
+grupo=int(input("ingrese su grupo familiar( numero entero usted incluido) :"))
 
-grupo=int(input())
-descuentoF=0
 if grupo==1:
-    descuentoF=2
-elif 2<=grupo<=4:
-    descuentoF=3
-elif grupo >= 5:
-    descuentoF=4
+    descuento+=2
+elif 2<=grupo<=4 and grupo>=2:
+    descuento+=3
+elif grupo>=5:
+    descuento+=4
 else:
-    print("num de personas invalido")
+    print("seleccion incorrecta")
 
-descuento+descuentoF==total
-
-total=calcular_descuento(comuna, grupo)
-monto_con_descuento=arancel*(1-descuento_aplicado)
-
-print(F"comuna de residencia: {comuna}")
-print(F"num de personas: {grupo}")
-print(f"descuento total aplicado: {descuento_aplicado * 100:.2f}%")
-print(F"arancel actual: {arancel:,.0f}")
-print(F"monto final a pagar: ${monto_con_descuento:,.0f}")
-
+print("el desceunto total es ", descuento,"%")
+desc=arancel*descuento/100
+total=arancel-desc
+print("el total a pagar es $",total)
