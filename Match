@@ -1,0 +1,144 @@
+import random
+
+# def arancel():
+#     print("ingrese su comuna")
+    
+#     descuento=0
+#     total=0
+#     arancel=200000
+
+#     print('''
+#         1.- La Florida 20%
+#         2.- La Pintana 30%
+#         3.- Puente alto 25%
+#         4.- San Joaquin 15%
+#         ''')
+#     comuna=int(input("seleccione una comuna: "))
+
+#     if comuna==1:
+#         descuento=20
+#     elif comuna==2:
+#         descuento=30
+#     elif comuna==3:
+#         descuento=25
+#     elif comuna==4:
+#         descuento=15
+#     else:
+#         print("comuna incorrecta")
+
+#     grupo=int(input("ingrese su grupo familiar( numero entero usted incluido) :"))
+
+#     if grupo==1:
+#         descuento+=2
+#     elif 2<=grupo<=4 and grupo>=2:
+#         descuento+=3
+#     elif grupo>=5:
+#         descuento+=4
+#     else:
+#         print("seleccion incorrecta")
+
+#     print("el desceunto total es ", descuento,"%")
+#     desc=arancel*descuento/100
+#     total=arancel-desc
+#     print("el total a pagar es $",total)
+
+# def azarN():
+#     print("hola")
+
+# while True:
+#     print('''
+#             seleccione una opcion
+#           1. numero al azar
+#           2. calcular arancel
+#           3. salir
+#             ''')
+#     op=int(input())
+#     match op:
+#         case 1:
+#             azarN()
+#         case 2:
+#             arancel()
+#         case 3:
+#             break
+#         case _:
+#             print("seleccione una opcion valida")
+
+
+###TAREA CREAR UN MENU DE CARRITO CON LAS SIGUIENTES OPCIONES
+##1 INGRESAS NOMBRE DEL USUARIO
+##2 COMPRAR, PONER PRODUCTOS PARA PODER  COMPRAR CON SU PRECIO CORRESPONDIENTE
+##3 SACAR BOLETA, CALCULAR EL PRECIO NETO Y EL PRECIO MAS IVA, MOSTRAR TOTALE
+## SERA MOSTRADO EN LA BOLETA, CON UN SALUDO
+##4 SALIR
+# CONSIDERACIONES: POR LO MENOS 3 PRODUCTOS
+# NO HAY LIMITE DE COMPRA
+# SE PUEDE SALIR EN CUALQUIER MOMENTO
+# LOS MONTOS DE LOS PRODUCTOS SON FIJOS
+
+
+def nombre():
+    nombre=input("ingrese su nombre")
+    return nombre
+
+def Productos():
+    total=0
+    while True:
+        print('''
+                ¿Que va a comprar?
+            1. Monster $1690
+            2. Pringles $2550
+            3. Cerveza Budweiser $1100
+            4. SALIR
+                ''')
+        ops=int(input())
+        match ops:
+            case 1:
+                print("Monster $1690")
+                total=total+1690
+            case 2:
+                print("Pringles $2550")
+                total=total+2550
+            case 3:
+                print("Cerveza Budweser $1100")
+                total=total+1100
+            case 4:
+                Menu()
+                break
+            case _:
+                print("seleccione opcion valida")
+                
+
+                
+            
+def Boleta(nombre):
+        print(f'''
+                        LIDER
+                    -------------
+                Total es = 
+                Muchas gracias {nombre}
+                    -------------
+        ''')
+
+def Menu():
+    while True:
+        print('''
+                seleccione una opcion
+            1. ingresar nombre
+            2. Comprar
+            3. Boleta
+            4. SALIR
+                ''')
+        op=int(input())
+        match op:
+            case 1:
+                nombre()
+            case 2:
+                Productos()
+            case 3:
+                Boleta()
+            case 4:
+                break
+            case _:
+                print("seleccione una opcion valida")
+
+Menu()
