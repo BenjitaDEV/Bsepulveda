@@ -107,16 +107,14 @@ def Productos():
             case _:
                 print("seleccione opcion valida")
                 
-
-                
-            
 def Boleta(nombre):
+        
         print(f'''
-                        LIDER
-                    -------------
-                Total es = 
-                Muchas gracias {nombre}
-                    -------------
+                    LIDER
+                -------------
+            Total es = 
+            Muchas gracias {}
+                -------------
         ''')
 
 def Menu():
@@ -142,3 +140,14 @@ def Menu():
                 print("seleccione una opcion valida")
 
 Menu()
+
+
+
+
+##EJERCICIO 2
+
+# PEDIR CANTIDAD DE ALUMNNO
+#PEDIR NOTAS POR CADA ALUMNO
+#PROMEDIAR A CADA ALUMNO
+#MOSTRAR SI APRUEBA O REPRUEBA
+#BONUS, MOSTRAR PROMEDIO DE TODOS LOS ALUMNOS INGRESADOS
