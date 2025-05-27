@@ -1,0 +1,86 @@
+def menu():
+    deuda=100000
+    saldo=700000
+    while True:
+        print('''
+                ¿Que accion realizaras?
+            1. Pago de Tarjeta de Credito
+            2. Simulacion de compras
+            3. SALIR
+                ''')
+        op=int(input())
+        match op:
+            case 1:
+                while True:
+                    print('''
+                        ¿Que accion realizaras?
+                        1. Saldo
+                        2. Pago Cupo de tarjeta
+                        3. Salir
+                            ''')
+                    op=int(input())
+                    match op:
+                        case 1:
+                            print("Tu saldo es de ", saldo)
+                        case 2:
+                            print(f"Tienes una deuda de {deuda}")
+                            while True:
+                                try:
+                                    pago=int(input("Ingrese el monto a pagar: "))
+                                    break
+                                except (Exception, ValueError):
+                                    print("solo se admiten numeros enteros")
+                            if pago>0 and pago<=deuda:
+                                deuda=deuda-pago
+                                saldo=saldo-pago
+                                print(f"Tu saldo es de {saldo}")
+                            else:
+                                print(f"el pago debe ser mayor a cero y no debe exceder {deuda}")
+                        case 3:
+                            break
+                        case _:
+                            print("seleccione opcion valida")
+            case 2:
+                cant=int(input("cuantos productos llevara :"))
+                total=0
+                for i in range(cant):
+                    print('''
+                        Que producto llevará?
+                        1.-Triton $1.200
+                        2.- Trencito $1.500
+                        3.- yogurt $600
+                        4.- Play station 5 Edicion Digital $549.990
+                        ''')
+                    op=int(input())
+                    if op==1:
+                        print("usted llevaria Triton")
+                        total=total+1200
+                    elif op==2:
+                        print("usted llevaria Trencito")
+                        total=total+1500
+                    elif op==3:
+                        print("usted llevaria Yogurt $1000")
+                        total=total+600
+                    elif op==4:
+                        print("Usted llevará Play station 5 Edicion Digital")
+                        total=total+549990
+                    else:
+                        print("seleccione una opcion valida")
+                        
+                print ("Total = ", total)
+                if total>saldo:
+                    print("saldo insuficiente")
+                else:
+                    respuesta=input("¿Desea comprar? s/n \n")
+                    if respuesta == "s":
+                            print ("su saldo es de", saldo-total)
+                            menu()
+                    elif respuesta == "n":
+                            menu()
+            case 3:
+                print("saliendo")
+                break
+            case _:
+                print("seleccione opcion valida")
+
+menu()

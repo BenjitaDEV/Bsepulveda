@@ -6,13 +6,20 @@
 # else:
 #  print("usted es menor")
 
-edad=int(input("ingresa tu edad"))
+# edad=int(input("ingresa tu edad"))
 
-if edad<12:
- print("usted es niño")
-elif edad>=12 and edad<18:
- print("usted es adolescente") 
-elif edad>=18 and edad<65:
- print("usted es adulto")
-else:
- print ("eres un tata")
+# if edad<12:
+#  print("usted es niño")
+# elif edad>=12 and edad<18:
+#  print("usted es adolescente") 
+# elif edad>=18 and edad<65:
+#  print("usted es adulto")
+# else:
+#  print ("eres un tata")
+
+def suma():
+    resultado = 100000
+    return resultado
+
+resultado = suma()
+print(resultado)
