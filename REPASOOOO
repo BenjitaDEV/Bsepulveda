@@ -106,51 +106,51 @@ from random import randint
 # existe posibilidad de ataque critico del 20% sera atk*2
 # gana el que le quita todo el HP al rival
 
-p1=input("Peleador 1")
-p2=input("Peleador 2")
-hp1=50
-hp2=50
-turno=random.randint(1,2)
+# p1=input("Peleador 1")
+# p2=input("Peleador 2")
+# hp1=50
+# hp2=50
+# turno=random.randint(1,2)
 
-while hp1>0 or hp2>0:
-    if turno %2==0:
-        print("turno de ",p1)
-        atk=random.randint(3,15)
-        critical=random.randint(1,5)
-        if critical==3:
-            atk*2
-            print("ataque critico")
-        hp2-=atk
-        time.sleep(1)
-        print(f"vida de {p2}")
-        print("■"*hp2)
-    else:
-        print("turno de ",p2)
-        atk=random.randint(3,15)
-        critical=random.randint(1,5)
-        if critical==3:
-            atk*2
-            print("ataque critico")
-        hp1-=atk
-        time.sleep(1)
-        print(f"vida de {p1}")
-        print("■"*hp1)
-    turno+=1
+# while hp1>0 or hp2>0:
+#     if turno %2==0:
+#         print("turno de ",p1)
+#         atk=random.randint(3,15)
+#         critical=random.randint(1,5)
+#         if critical==3:
+#             atk*2
+#             print("ataque critico")
+#         hp2-=atk
+#         time.sleep(1)
+#         print(f"vida de {p2}")
+#         print("■"*hp2)
+#     else:
+#         print("turno de ",p2)
+#         atk=random.randint(3,15)
+#         critical=random.randint(1,5)
+#         if critical==3:
+#             atk*2
+#             print("ataque critico")
+#         hp1-=atk
+#         time.sleep(1)
+#         print(f"vida de {p1}")
+#         print("■"*hp1)
+#     turno+=1
 
-ultra=random.randint(3,10)
+# ultra=random.randint(3,10)
 
-if hp1>hp2:
-    for i in range(ultra):
-        print("kick")
-        time.sleep(1)
-    print(F"Ha ganado {p1}")
-    print("ULTRAAAAA!!!")
-else:
-    for i in range(ultra):
-        print("kick")
-        time.sleep(1)
-    print(f"Ha ganado {p2}")
-    print("ULTRAAAAA!!!")
+# if hp1>hp2:
+#     for i in range(ultra):
+#         print("kick")
+#         time.sleep(1)
+#     print(F"Ha ganado {p1}")
+#     print("ULTRAAAAA!!!")
+# else:
+#     for i in range(ultra):
+#         print("kick")
+#         time.sleep(1)
+#     print(f"Ha ganado {p2}")
+#     print("ULTRAAAAA!!!")
 
 
 
@@ -195,3 +195,177 @@ else:
 # else:
 #     sueldo+=1000
 # print("el total del sueldo del jugador al final de temporada es:", sueldo)
+
+#REPASO UNIDAD 2, if, if else, if elif, while, for, match try except
+
+#uso y manejo de try excepto dentro de un bucle while
+
+# while True:
+#     try:
+#         num=int(input("ingrese un numero: \n"))
+#     except Exception: #hasta aqui esta bien
+#         print("Solo puede ingresar numeros enteros")
+
+#ejemplo de sintaxis de try except independiente de un bucle
+
+# try:
+#     num=int(input("ingrese un numero: \n"))
+# except Exception: #hasta aqui esta bien
+#     print("Solo puede ingresar numeros enteros")
+# else: #98% no se usa
+#     print("Si es que no hay excepcion")
+# finally: #99% de las veces no se usa
+#     print("Este bloque se ejecutara si o si, sin importar si hay excepcion o no")
+
+#menu de opciones con numeros enteros
+
+# while True:
+#     try:
+#         opcion=int(input('''
+#                         Seleccione una opcion
+#                         1.- Opcion 1
+#                         2.- Opcion 2
+#                         3.- Opcion 3
+#                         4.- Salir
+#                             '''))
+#         match opcion:
+#             case 1:
+#                 print("Has seleccionado la opcion 1")
+#             case 2:
+#                 print("Has seleccionado la opcion 2")
+#             case 3:
+#                 print("Has seleccionado la opcion 3")
+#             case 4:
+#                 print("Saliendo...")
+#                 break
+#             case _:
+#                 print("opcion invalida")
+#     except Exception:
+#         print("Solo puede ingresar numeros enteros")
+
+##      SUPER MERCADO EJEMPLO    ######
+
+# total=0
+# cantArt=0
+
+# while True:
+#     try:
+#         opcion=int(input('''
+#                         Seleccione una opcion con un numero
+#                         1.- comprar frutas
+#                         2.- comprar verduras
+#                         3.- pagar
+#                         4.- Salir
+#                             '''))
+#         match opcion:
+#             case 1:
+#                 while True:
+#                     try:
+#                         opcion=int(input('''
+#                                     Seleccione una opcion
+#                                     1.- Frutilla $1500
+#                                     2.- Pera $1200
+#                                     3.- Manzana $1300
+#                                     4.- Volver
+#                                             '''))
+#                         match opcion:
+#                             case 1:
+#                                 print("Has seleccionado Frutilla")
+#                                 total+=1500
+#                                 cantArt+=1
+#                             case 2:
+#                                 print("Has seleccionado Pera")
+#                                 total+=1200
+#                                 cantArt+=1
+#                             case 3:
+#                                 print("Has seleccionado Manzana")
+#                                 total+=1300
+#                                 cantArt+=1
+#                             case 4:
+#                                 print("Volviendo...")
+#                                 break
+#                             case _:
+#                                 print("opcion invalida")
+                                
+#                     except Exception:
+#                         print("Solo puede ingresar numeros enteros")
+#                     print("Tu total hasta ahora es", total)
+#                     print("Tu total mas IVA hasta ahora es", total*1.19)
+#             case 2:
+#                 while True:
+#                     try:
+#                         opcion=int(input('''
+#                                     Seleccione una opcion
+#                                     1.- Cebolla $1500
+#                                     2.- Pepino $1000
+#                                     3.- Lechuga $1100
+#                                     4.- Volver
+#                                             '''))
+#                         match opcion:
+#                             case 1:
+#                                 print("Has seleccionado Cebolla")
+#                                 cant=int(input("Cuantas Cebollas llevara?"))
+#                                 total+=cant*1500
+#                                 cantArt+=cant
+#                             case 2:
+#                                 print("Has seleccionado Pepino")
+#                                 cant=int(input("Cuantos Pepinos llevara?"))
+#                                 total+=1000
+#                                 cantArt+=1
+#                             case 3:
+#                                 print("Has seleccionado Lechuga")
+#                                 cant=int(input("Cuantas Lechugas llevara?"))
+#                                 total+=1100
+#                                 cantArt+=1
+#                             case 4:
+#                                 print("Saliendo...")
+#                                 break
+#                             case _:
+#                                 print("opcion invalida")
+                                
+#                     except Exception:
+#                         print("Solo puede ingresar numeros enteros")
+#                     print("Tu total hasta ahora es", total)
+#                     print("Tu total mas IVA hasta ahora es", total*1.19)
+#             case 3:
+#                 print(f"El total de articulos es {cant}")
+#                 print(f"El total a pagar es {total}")
+#                 print(f"El total a pagar mas IVA es {round(total*1.19)}")
+#             case 4:
+#                 print("Saliendo...")
+#                 break
+#             case _:
+#                 print("opcion invalida")
+#     except Exception:
+#         print("Solo puede ingresar numeros enteros")
+
+##Domingo de Pascua######
+
+while True:
+    try:
+        cantNiños=int(input("cuantos niños van a buscar huevitos? "))
+        while cantNiños<0:
+            print("Error, solo ingrese numeros positivos")
+            cantNiños=int(input("cuantos niños van a buscar huevitos? "))
+        break
+    except Exception:
+        print("solo puede ingresar numeros enteros")
+noob=0
+master=0
+legend=0
+top=0
+for n in range(cantNiños):
+    cantHuevos=random.randint(5,30)
+    if cantHuevos>top:
+        top=cantHuevos
+    print(f"El niño numero {n+1} encontró {cantHuevos} huevos")
+    if cantHuevos<12:
+        noob+=1
+    elif cantHuevos>=12 and cantHuevos<=24:
+        master+=1
+    else:
+        legend+=1
+print("la cant del grupo noob es ", noob)
+print("la cant del grupo master es ", master)
+print("la cant del grupo legend es ", legend)
+print("la mayor cant de huevos encontrada por un niño fue ", top)

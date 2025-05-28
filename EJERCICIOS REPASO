@@ -1,149 +1,147 @@
 ##ACTIVIDAD TARJETA DE CREDITO
 
-
-def pago(): 
-    deuda=100000
-    saldo=700000
-    while True:
-        print('''
-                ¿Que accion realizaras?
-            1. Saldo
-            2. Pago Cupo de tarjeta
-            3. Salir
-                ''')
-        op=int(input())
-        match op:
-            case 1:
-                print("Tu saldo es de ", saldo)
-            case 2:
-                print(f"Tienes una deuda de {deuda}")
-                while True:
-                    try:
-                        pago=int(input("Ingrese el monto a pagar: "))
-                        break
-                    except (Exception, ValueError):
-                        print("solo se admiten numeros enteros")
-                if pago>0 and pago<=deuda:
-                    deuda=deuda-pago
-                    saldo=saldo-pago
-                    print(f"Tu saldo es de {saldo}")
-                else:
-                    print(f"el pago debe ser mayor a cero y no debe exceder {deuda}")
-            case 3:
-                menu()
-                break
-            case _:
-                print("seleccione opcion valida")
-
-def compras():
-    cant=int(input("cuantos productos llevara :"))
-    total=0
-    saldo=700000
-    for i in range(cant):
-        print('''
-            Que producto llevará?
-            1.-Triton $1.200
-            2.- Trencito $1.500
-            3.- yogurt $600
-            4.- Play station 5 Edicion Digital $549.990
-            ''')
-        op=int(input())
-        if op==1:
-            print("usted llevaria Triton")
-            total=total+1200
-        elif op==2:
-            print("usted llevaria Trencito")
-            total=total+1500
-        elif op==3:
-            print("usted llevaria Yogurt $1000")
-            total=total+600
-        elif op==4:
-            print("Usted llevará Play station 5 Edicion Digital")
-            total=total+549990
-        else:
-            print("seleccione una opcion valida")
-
-    if saldo<total:
-        print("no tiene saldo suficiente")
-    else:
-        print ("el total mas IVA es ", total*1.19, "¿Desea comprar?\n")
-        respuesta=input()
-        if respuesta == "s":
-            print ("su saldo es de", saldo-total*1.19)
-            menu()
-        elif respuesta == "n":
-            compras()
-
-
-def menu():
-    while True:
-        print('''
-                ¿Que accion realizaras?
-            1. Pago de Tarjeta de Credito
-            2. Simulacion de compras
-            3. SALIR
-                ''')
-        op=int(input())
-        match op:
-            case 1:
-                pago()
-            case 2:
-                compras()
-            case 3:
-                print("saliendo")
-                break
-            case _:
-                print("seleccione opcion valida")
-
-menu()
-
-
-
-##EJERCICIO DOOOOOOOS
-
-# usuario1 =
-# usuario2 =
-# usuario3 =
-# contraseña1 =
-# contraseña2 =
-# contraseña3 =
-
-# def sesion():
+# def pago(): 
+#     deuda=100000
+#     saldo=700000
 #     while True:
 #         print('''
-#             1. Realizar llamada
-#             2. Enviar correo electronico
-#             3. Cerrar sesion
-#               ''')
-#         ops=int(input())
-#         match ops:
+#                 ¿Que accion realizaras?
+#             1. Saldo
+#             2. Pago Cupo de tarjeta
+#             3. Salir
+#                 ''')
+#         op=int(input())
+#         match op:
 #             case 1:
+#                 print("Tu saldo es de ", saldo)
 #             case 2:
-
-#                 if "@" not in correo:
+#                 print(f"Tienes una deuda de {deuda}")
+#                 while True:
+#                     try:
+#                         pago=int(input("Ingrese el monto a pagar: "))
+#                         break
+#                     except (Exception, ValueError):
+#                         print("solo se admiten numeros enteros")
+#                 if pago>0 and pago<=deuda:
+#                     deuda=deuda-pago
+#                     saldo=saldo-pago
+#                     print(f"Tu saldo es de {saldo}")
+#                 else:
+#                     print(f"el pago debe ser mayor a cero y no debe exceder {deuda}")
 #             case 3:
-#                 INICIO()
-#                 break
-            
+#                 menu()
+#             case _:
+#                 print("seleccione opcion valida")
 
-# def INICIO():
+# def compras():
+#     cant=int(input("cuantos productos llevara :"))
+#     total=0
+#     saldo=700000
+#     for i in range(cant):
+#         print('''
+#             Que producto llevará?
+#             1.-Triton $1.200
+#             2.- Trencito $1.500
+#             3.- yogurt $600
+#             4.- Play station 5 Edicion Digital $549.990
+#             ''')
+#         op=int(input())
+#         if op==1:
+#             print("usted llevaria Triton")
+#             total=total+1200
+#         elif op==2:
+#             print("usted llevaria Trencito")
+#             total=total+1500
+#         elif op==3:
+#             print("usted llevaria Yogurt $1000")
+#             total=total+600
+#         elif op==4:
+#             print("Usted llevará Play station 5 Edicion Digital")
+#             total=total+549990
+#         else:
+#             print("seleccione una opcion valida")
+
+#     if saldo<total:
+#         print("no tiene saldo suficiente")
+#     else:
+#         print ("el total mas IVA es ", total*1.19, "¿Desea comprar?\n")
+#         respuesta=input()
+#         if respuesta == "s":
+#             print ("su saldo es de", saldo-total*1.19)
+#             menu()
+#         elif respuesta == "n":
+#             compras()
+
+
+# def menu():
 #     while True:
 #         print('''
-#                 seleccione una opcion
-#             1. iniciar sesion
-#             2. Registrar usuario
+#                 ¿Que accion realizaras?
+#             1. Pago de Tarjeta de Credito
+#             2. Simulacion de compras
 #             3. SALIR
 #                 ''')
 #         op=int(input())
 #         match op:
 #             case 1:
-#                 nombre()
+#                 pago()
 #             case 2:
-#                 Productos()
+#                 compras()
 #             case 3:
 #                 print("saliendo")
 #                 break
 #             case _:
-#                 print("seleccione una opcion valida")
+#                 print("seleccione opcion valida")
 
-# INICIO()
+# menu()
+
+
+
+#EJERCICIO DOOOOOOOS
+
+usuario1 =
+usuario2 =
+usuario3 =
+contraseña1 =
+contraseña2 =
+contraseña3 =
+
+def sesion():
+    while True:
+        print('''
+            1. Realizar llamada
+            2. Enviar correo electronico
+            3. Cerrar sesion
+              ''')
+        ops=int(input())
+        match ops:
+            case 1:
+            case 2:
+
+                if "@" not in correo:
+            case 3:
+                INICIO()
+                break
+            
+
+def INICIO():
+    while True:
+        print('''
+                seleccione una opcion
+            1. iniciar sesion
+            2. Registrar usuario
+            3. SALIR
+                ''')
+        op=int(input())
+        match op:
+            case 1:
+                nombre()
+            case 2:
+                Productos()
+            case 3:
+                print("saliendo")
+                break
+            case _:
+                print("seleccione una opcion valida")
+
+INICIO()
