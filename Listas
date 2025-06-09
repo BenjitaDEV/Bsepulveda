@@ -10,33 +10,130 @@
 
 ##LISTAS CON MENU##
 
-nombres = []
+# nombres = []
 
-apellidos = []
+# apellidos = []
+
+# while True:
+#         print('''
+#                 ¿Que accion realizaras?
+#             1. ingresa nombre
+#             2. lista de nombres
+#             3. SALIR
+#                 ''')
+#         op=int(input())
+
+#         match op:
+#             case 1:
+#                 nombre = input("Introduce el nombre que quieres agregar: ")
+#                 nombres.append(nombre)
+#                 print(f"'{nombre}' ha sido agregado a la lista.")
+#             case 2:
+#                 if nombres:
+#                     print("\n--- Nombres en la lista ---")
+#                     for i, n in enumerate(nombres, 1):
+#                         print(f"{i}. {n}")
+#                 else:
+#                     print("La lista de nombres está vacía.")
+#             case 3:
+#                 print("saliendo")
+#                 break 
+#             case _:
+#                 print("error ingrese un numero valido")
+
+##Super merk2 con Listas
+
+total=0
+cantArt=0
+Productos=[]
 
 while True:
-        print('''
-                ¿Que accion realizaras?
-            1. ingresa nombre
-            2. lista de nombres
-            3. SALIR
-                ''')
-        op=int(input())
-
-        match op:
+    try:
+        opcion=int(input('''
+                        Seleccione una opcion con un numero
+                        1.- Agregar productos (nombre producto y precio)
+                        2.- Comprar (Submenu mostrando productos y precios)
+                        3.- Crear boleta
+                        4.- Salir
+                            '''))
+        match opcion:
             case 1:
-                nombre = input("Introduce el nombre que quieres agregar: ")
-                nombres.append(nombre)
-                print(f"'{nombre}' ha sido agregado a la lista.")
+                while True:
+                    try:
+                        opcion=int(input('''
+                                    Seleccione una opcion
+                                    1.- Frutilla $1500
+                                    2.- Pera $1200
+                                    3.- Manzana $1300
+                                    4.- Volver
+                                            '''))
+                        match opcion:
+                            case 1:
+                                print("Has seleccionado Frutilla")
+                                total+=1500
+                                cantArt+=1
+                            case 2:
+                                print("Has seleccionado Pera")
+                                total+=1200
+                                cantArt+=1
+                            case 3:
+                                print("Has seleccionado Manzana")
+                                total+=1300
+                                cantArt+=1
+                            case 4:
+                                print("Volviendo...")
+                                break
+                            case _:
+                                print("opcion invalida")
+                                
+                    except Exception:
+                        print("Solo puede ingresar numeros enteros")
+                    print("Tu total hasta ahora es", total)
+                    print("Tu total mas IVA hasta ahora es", total*1.19)
             case 2:
-                if nombres:
-                    print("\n--- Nombres en la lista ---")
-                    for i, n in enumerate(nombres, 1):
-                        print(f"{i}. {n}")
-                else:
-                    print("La lista de nombres está vacía.")
+                while True:
+                    try:
+                        opcion=int(input('''
+                                    Seleccione una opcion
+                                    1.- Cebolla $1500
+                                    2.- Pepino $1000
+                                    3.- Lechuga $1100
+                                    4.- Volver
+                                            '''))
+                        match opcion:
+                            case 1:
+                                print("Has seleccionado Cebolla")
+                                cant=int(input("Cuantas Cebollas llevara?"))
+                                total+=cant*1500
+                                cantArt+=cant
+                            case 2:
+                                print("Has seleccionado Pepino")
+                                cant=int(input("Cuantos Pepinos llevara?"))
+                                total+=1000
+                                cantArt+=1
+                            case 3:
+                                print("Has seleccionado Lechuga")
+                                cant=int(input("Cuantas Lechugas llevara?"))
+                                total+=1100
+                                cantArt+=1
+                            case 4:
+                                print("Saliendo...")
+                                break
+                            case _:
+                                print("opcion invalida")
+                                
+                    except Exception:
+                        print("Solo puede ingresar numeros enteros")
+                    print("Tu total hasta ahora es", total)
+                    print("Tu total mas IVA hasta ahora es", total*1.19)
             case 3:
-                print("saliendo")
-                break 
+                print(f"El total de articulos es {cant}")
+                print(f"El total a pagar es {total}")
+                print(f"El total a pagar mas IVA es {round(total*1.19)}")
+            case 4:
+                print("Saliendo...")
+                break
             case _:
-                print("error ingrese un numero valido")
+                print("opcion invalida")
+    except Exception:
+        print("Solo puede ingresar numeros enteros")
