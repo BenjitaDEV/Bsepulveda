@@ -1,0 +1,42 @@
+# for numero in numeros
+
+# nombres = ["Felipe", "Ana", "Pedro", "Maria", "Luis"]
+
+# print(nombres)
+
+# numeros = []
+
+# print
+
+##LISTAS CON MENU##
+
+nombres = []
+
+apellidos = []
+
+while True:
+        print('''
+                ¿Que accion realizaras?
+            1. ingresa nombre
+            2. lista de nombres
+            3. SALIR
+                ''')
+        op=int(input())
+
+        match op:
+            case 1:
+                nombre = input("Introduce el nombre que quieres agregar: ")
+                nombres.append(nombre)
+                print(f"'{nombre}' ha sido agregado a la lista.")
+            case 2:
+                if nombres:
+                    print("\n--- Nombres en la lista ---")
+                    for i, n in enumerate(nombres, 1):
+                        print(f"{i}. {n}")
+                else:
+                    print("La lista de nombres está vacía.")
+            case 3:
+                print("saliendo")
+                break 
+            case _:
+                print("error ingrese un numero valido")
